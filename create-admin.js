@@ -21,7 +21,7 @@ const createAdmin = async () => {
         const admin = new User({
             userId: 'admin@gmail.com',
             name: 'Administrator',
-            phone: 'admin@123',
+            phone: 'admin@gmail.com',
             password: '1234', // In production, this should be hashed
             role: 'ADMIN'
         });
@@ -39,4 +39,3 @@ const createAdmin = async () => {
 };
 
 createAdmin();
-
