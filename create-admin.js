@@ -11,7 +11,7 @@ const createAdmin = async () => {
         console.log('MongoDB Connected...');
 
         // Check if admin already exists
-        const existingAdmin = await User.findOne({ userId: 'admin@123' });
+        const existingAdmin = await User.findOne({ userId: 'admin@gmail.com' });
         if (existingAdmin) {
             console.log('Admin user already exists');
             process.exit(0);
@@ -19,7 +19,7 @@ const createAdmin = async () => {
 
         // Create admin user
         const admin = new User({
-            userId: 'admin@123',
+            userId: 'admin@gmail.com',
             name: 'Administrator',
             phone: 'admin@123',
             password: '1234', // In production, this should be hashed
@@ -28,7 +28,7 @@ const createAdmin = async () => {
 
         await admin.save();
         console.log('✅ Admin user created successfully!');
-        console.log('Username: admin@123');
+        console.log('Username: admin@gmail.com');
         console.log('Password: 1234');
 
         process.exit(0);
@@ -39,3 +39,4 @@ const createAdmin = async () => {
 };
 
 createAdmin();
+
